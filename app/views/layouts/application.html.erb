@@ -42,23 +42,22 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
+        <div class="span12">
+	      <% if flash.any? %>
+	        <div class="alert alert-notice">
+		    <%= flash.each do |type, message| %>
+				<%= raw(message) %>	
+			<% end %>
+		    </div>
+		  <% end%>
+
           <%= yield %>
+
         </div>
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; JefKorp 2012</p>
       </footer>
 
     </div> <!-- /container -->
