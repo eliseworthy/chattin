@@ -1,25 +1,47 @@
 <%- model_class = Message.new.class -%>
-<div class="page-header">
-  <h1>JefKorp Corporate Chat</h1>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Posted By</th>
-      <th><%= model_class.human_attribute_name(:body) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-    </tr>
-  </thead>
-  <tbody id="scroller">
-    <% @messages.each do |message| %>
-      <%= render message %>
+
+<div class="row-fluid">
+  <div class="topper">
+    <div class="span6 slide-deck">
+      <img src="/assets/colors.jpg" />
+    </div>
+    <div class="span2"></div>
+    <div class="span4 user-list">
+      <ul class="nav nav-list">
+        <li class="nav-header">
+          Users in Chat
+        </li>
+        <li class="active">
+          <a href="#">User A</a>
+        </li>
+        <li>
+          <a href="#">User B</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>  
+
+<div class="row-fluid chat">
+  <div class="span8">
+    <table class="table">
+      <tbody id="scroller">
+        <% @messages.each do |message| %>
+          <%= render message %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="span4 submit-box">
+    <%= form_for Message.new, remote: true do |f| %>
+      <%= f.text_area :body %>
+      <p />
+      <%= f.submit "Send" %>
     <% end %>
-  </tbody>
-</table>
-<p />
-<div class="submit-box">
-  <%= form_for Message.new, remote: true do |f| %>
-    <%= f.text_area :body %>
-    <%= f.submit "Send" %>
-  <% end %>
+  </div>
 </div>
+
+
+
+
+

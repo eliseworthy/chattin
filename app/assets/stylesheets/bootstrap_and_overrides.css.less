@@ -17,35 +17,76 @@ body { padding-top: 60px; }
 // Font Awesome
 @import "fontawesome";
 
-// Your custom LESS stylesheets goes here
-//
-// Since bootstrap was imported above you have access to its mixins which
-// you may use and inherit here
-//
-// If you'd like to override bootstrap's own variables, you can do so here as well
-// See http://twitter.github.com/bootstrap/less.html for their names and documentation
-//
-// Example:
-// @linkColor: #ff0000;
+// Top nav
+.navbar .brand {
+  color: #FFFEFA;
+}
 
-.table-striped {
+.navbar .nav > li > a {
+  color: #FFFEFA;
+}
+
+.navbar-inner {
+  background-image: none;
+  background-color: #08C;
+}
+
+// Body
+body {
+  background: #FFE683;
+}
+
+// Slides and user list 
+.topper {
+  height: 375px;
+  margin-bottom: 15px;
+}
+
+.slide-deck {
+  padding-left: 15px;
+  height: 100%;
+}
+
+.user-list {
+  background-color: #FCF6DF;
+  height: 100%;
+}
+
+//All chats
+
+.chat {
+ padding-top: 20px;
+ background-color: #FCF6DF;
+}
+
+.table {
+  margin-left: 15px;
+  border: 1px solid #CCC;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   display: block;
-  height: 300px;
+  width: 95%;
+  height: 100px;
 }
 
-.table-striped tbody {
-  border: 1px solid darkgray;
+.table tbody {
   display: inline-block;
-  height: 300px;
-  width: 100%;
+  height: 100px;
   overflow-y: scroll;
+  background: #FFFEFA;
 }
 
-.submit-box {
-  margin-top: 50px;
+//Chat new message box
+
+.chat {
+  margin-bottom: 15px;
 }
 
 .submit-box textarea {
-  width: 600px;
-  height: 100px;
+  width: 90%;  
+  height: 58px;
+  background-color: #FFFEFA;
+  padding-right: 15px;
 }
+
