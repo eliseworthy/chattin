@@ -16,3 +16,6 @@
 
 # Ignore RVM files
 .rvmrc
+
+# Ignore POW files
+.powenv
