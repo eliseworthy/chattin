@@ -22,3 +22,5 @@
 
 # Ignore Simplecov
 coverage
+
+/**/.DS_Store
