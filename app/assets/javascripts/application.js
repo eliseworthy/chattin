@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+$(function() {
+  var faye = new Faye.Client('http://10.23.41.17:9292/faye');
+  faye.subscribe('/messages/new', function(data) {
+    eval(data);
+  });
+});

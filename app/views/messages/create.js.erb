@@ -1,0 +1,5 @@
+<% broadcast "/messages/new" do %>
+  $("#scroller").append("<%= j render(@message) %>");
+  $("#scroller").scrollTop($("#scroller").prop('scrollHeight'));
+<% end %>
+$("#new_message")[0].reset();

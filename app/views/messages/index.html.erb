@@ -10,19 +10,15 @@
       <th><%= model_class.human_attribute_name(:created_at) %></th>
     </tr>
   </thead>
-  <tbody class="scroller">
+  <tbody id="scroller">
     <% @messages.each do |message| %>
-      <tr>
-        <td>Awesome User</td>
-        <td><%= message.body %></td>
-        <td><%=l message.created_at %></td>
-      </tr>
+      <%= render message %>
     <% end %>
   </tbody>
 </table>
 <p />
 <div class="submit-box">
-  <%= form_for Message.new, do |f| %>
+  <%= form_for Message.new, remote: true do |f| %>
     <%= f.text_area :body %>
     <%= f.submit "Send" %>
   <% end %>

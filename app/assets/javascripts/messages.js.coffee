@@ -1,2 +1,2 @@
 jQuery ->
-  $(".scroller").scrollTop($(".scroller").prop('scrollHeight'));
+  $("#scroller").scrollTop($("#scroller").prop('scrollHeight'));
