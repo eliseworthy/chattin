@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'unicorn'
 gem 'rvm'
-gem 'rvm-capistrano'
-gem 'capistrano'
 
 
 gem 'rails', '3.2.3'
@@ -27,6 +25,9 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'simplecov'
+
+  gem 'capistrano'
+  gem 'rvm-capistrano'
 end
 
 
