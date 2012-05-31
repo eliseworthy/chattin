@@ -26,6 +26,7 @@ group :development, :test do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'simplecov'
+  gem 'capybara-webkit'
 end
 
 
