@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'unicorn'
 gem 'rvm'
 gem 'rvm-capistrano'
+gem 'capistrano'
 
 
 gem 'rails', '3.2.3'
